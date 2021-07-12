@@ -1,6 +1,7 @@
 package model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Person {
@@ -10,9 +11,12 @@ public class Person {
     private int id;
     private String firstName;
     private String familyName;
+    @Transient
     private Gender gender;
     @ManyToOne
     private Course course;
+    @ManyToMany
+    private List<Course> courseHistory;
 
     public Person() {
     }

@@ -2,6 +2,7 @@ package model;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 public class Exam {
@@ -16,6 +17,9 @@ public class Exam {
     private int total;
     @ManyToOne
     private Module module;
+    @ManyToOne
+    private Exam examGroup;
+    private List<Exam> subExams;
 
     public Exam() {
     }

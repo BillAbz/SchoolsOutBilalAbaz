@@ -12,7 +12,7 @@ public class Module {
     private String description;
     @ManyToOne
     private Course course;
-    @OneToMany
+    @OneToMany(mappedBy = "module", cascade = CascadeType.DETACH)
     private List<Exam> exams;
 
     public Module() {

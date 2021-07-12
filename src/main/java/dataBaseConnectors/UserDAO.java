@@ -15,9 +15,9 @@ public class UserDAO {
         emf = EMFactory.getEMF ();
     }
 
-    public User getUserById(int id){
+    public User getUserById(String login){
         EntityManager em = emf.createEntityManager ();
-        return em.find (User.class, id);
+        return em.find (User.class, login);
     }
 
     public List<User> getAllUser(){
