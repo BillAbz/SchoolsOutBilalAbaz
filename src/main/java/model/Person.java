@@ -67,6 +67,14 @@ public class Person {
         this.course = course;
     }
 
+    public List<Course> getCourseHistory() {
+        return courseHistory;
+    }
+
+    public void setCourseHistory(List<Course> courseHistory) {
+        this.courseHistory = courseHistory;
+    }
+
     @Override
     public String toString() {
         return "Person{" +

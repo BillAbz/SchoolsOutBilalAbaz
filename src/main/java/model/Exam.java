@@ -19,6 +19,7 @@ public class Exam {
     private Module module;
     @ManyToOne
     private Exam examGroup;
+    @ManyToMany
     private List<Exam> subExams;
 
     public Exam() {
@@ -39,6 +40,22 @@ public class Exam {
         this.weight = weight;
         this.total = total;
         this.module = module;
+    }
+
+    public Exam getExamGroup() {
+        return examGroup;
+    }
+
+    public void setExamGroup(Exam examGroup) {
+        this.examGroup = examGroup;
+    }
+
+    public List<Exam> getSubExams() {
+        return subExams;
+    }
+
+    public void setSubExams(List<Exam> subExams) {
+        this.subExams = subExams;
     }
 
     public Long getId() {
